@@ -1,7 +1,6 @@
 .exp-page {
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 80px;
 }
 
 .box {
