@@ -1,7 +1,6 @@
 //const data = require('./experiences-sample-data.json')
 //let searchResults = data.experiences;
 
-
 let searchResults = {};
 
 getAllExperiences();
@@ -40,6 +39,5 @@ function saveData(data) {
     searchResults = data.experiences;
     return searchResults
 }
-
 
 export { searchResults };
