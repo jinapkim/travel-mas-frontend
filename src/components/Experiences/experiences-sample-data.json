@@ -1,0 +1,96 @@
+{
+    "count": 5,
+    "experiences": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "title": "Four Roses Distillery Tour",
+            "description": "Tour of the Four Roses distillery",
+            "location": "Lawrenceburg, KY",
+            "geo_location": "38.0372967, -84.8966171",
+            "image_url": "../images/FourRoses.png",
+            "rating": 3,
+            "keywords": [
+                "four roses distillery tour",
+                "lawrenceburg, ky",
+                "lawrenceburg",
+                "ky",
+                "tour",
+                "four",
+                "roses",
+                "distillery"
+            ]
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "title": "Louisville Slugger Museum",
+            "description": "Tour of the Louisville Slugger Museum",
+            "location": "Louisville, KY",
+            "geo_location": "38.2526647, -85.7584557",
+            "image_url": "../images/LouisvilleSlugger.png",
+            "rating": 4,
+            "keywords": [
+                "louisville slugger museum",
+                "louisville, ky",
+                "louisville",
+                "ky",
+                "tour",
+                "slugger",
+                "museum"
+            ]
+        },
+        {
+            "id": 3,
+            "user_id": 2,
+            "title": "Dos Santos",
+            "description": "restaurant",
+            "location": "Colorado Springs, CO",
+            "geo_location": "38.8338816, -104.8213634",
+            "image_url": "../images/DosSantos.png",
+            "rating": 4,
+            "keywords": [
+                "dos santos",
+                "colorado springs, co",
+                "colorado springs",
+                "co",
+                "restaurant"
+            ]
+        },
+        {
+            "id": 4,
+            "user_id": 2,
+            "title": "Karl Strauss",
+            "description": "Brewery, restaurant",
+            "location": "San Diego",
+            "geo_location": "32.715738, -117.1610838",
+            "image_url": "../images/KarlStrauss.png",
+            "rating": 4,
+            "keywords": [
+                "karl strauss",
+                "san diego",
+                "restaurant",
+                "brewery"
+            ]
+        },
+        {
+            "id": 5,
+            "user_id": 1,
+            "title": "Field Museum",
+            "description": "Natural history museum",
+            "location": "Chicago, IL",
+            "geo_location": "41.8781136, -87.6297982",
+            "image_url": "../images/FieldMuseum.png",
+            "rating": 5,
+            "keywords": [
+                "field museum",
+                "chicago, il",
+                "chicago",
+                "il",
+                "natural",
+                "history",
+                "museum"
+            ]
+        }
+    ]
+}

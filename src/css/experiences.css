@@ -1,0 +1,31 @@
+.exp-page {
+    margin-top: 50px;
+}
+
+.box {
+    width: 40%;
+    margin-left: 80px;
+    margin-top: 50px;
+    float: left;
+}
+
+.shadow-box {
+    width: 80%;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.card-img {
+    width: 100%;
+}
+  
+.container {
+    padding-top: 10px; 
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.icon {
+    float: right;
+    padding-right: 20px;
+}
