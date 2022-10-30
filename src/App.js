@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,10 +8,7 @@ import Login from './pages/login';
 
 function App() {
 
-  const [token, setToken] = useState();
-  if (!token) {
-    return <Login setToken={setToken}/>
-  }
+  //const [token, setToken] = useState();
 
   return (
     <Router>
@@ -19,6 +16,7 @@ function App() {
       <Routes>
           <Route path='/' exact element={<Home/>} />
           <Route path='/signup' element={<Signup/>} />  
+          <Route path='/login' element={<Login/>} /> 
       </Routes>
     </Router>
   );
