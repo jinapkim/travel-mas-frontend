@@ -8,7 +8,7 @@
             "description": "Tour of the Four Roses distillery",
             "location": "Lawrenceburg, KY",
             "geo_location": "38.0372967, -84.8966171",
-            "image_url": "../images/FourRoses.png",
+            "image_url": "../images/FourRoses.jpg",
             "rating": 3,
             "keywords": [
                 "four roses distillery tour",
@@ -28,7 +28,7 @@
             "description": "Tour of the Louisville Slugger Museum",
             "location": "Louisville, KY",
             "geo_location": "38.2526647, -85.7584557",
-            "image_url": "../images/LouisvilleSlugger.png",
+            "image_url": "../images/LouisvilleSlugger.jpg",
             "rating": 4,
             "keywords": [
                 "louisville slugger museum",
@@ -47,7 +47,7 @@
             "description": "restaurant",
             "location": "Colorado Springs, CO",
             "geo_location": "38.8338816, -104.8213634",
-            "image_url": "../images/DosSantos.png",
+            "image_url": "../images/DosSantos.jpg",
             "rating": 4,
             "keywords": [
                 "dos santos",
@@ -64,7 +64,7 @@
             "description": "Brewery, restaurant",
             "location": "San Diego",
             "geo_location": "32.715738, -117.1610838",
-            "image_url": "../images/KarlStrauss.png",
+            "image_url": "../images/KarlStrauss.jpg",
             "rating": 4,
             "keywords": [
                 "karl strauss",
@@ -80,7 +80,7 @@
             "description": "Natural history museum",
             "location": "Chicago, IL",
             "geo_location": "41.8781136, -87.6297982",
-            "image_url": "../images/FieldMuseum.png",
+            "image_url": "../images/FieldMuseum.jpg",
             "rating": 5,
             "keywords": [
                 "field museum",
