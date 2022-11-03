@@ -11,14 +11,28 @@ function Experiences() {
 
     const [searchResults, setSearchResults] = useState([]);
 
-    const loadExperiences = async () => {
+    const loadAllExperiences = async () => {
         const response = await fetch('http://127.0.0.1:5000/experiences');
         const data = await response.json();
         setSearchResults(data.experiences);
     }
 
+    const loadExperiencesByKeyword = async keyword => {
+        const response = await fetch('http://127.0.0.1:5000/experiences?keyword=' + keyword);
+        const data = await response.json();
+        setSearchResults(data.experiences);
+    }
+
+    const loadExperiencesByUser = async user_id => {
+        const response = await fetch('http://127.0.0.1:5000/users/' + user_id + '/experiences');
+        const data = await response.json();
+        setSearchResults(data.experiences);
+    }
+
     useEffect(() => {
-        loadExperiences();
+        loadAllExperiences();
+        //loadExperiencesByKeyword(keyword);
+        //loadExperiencesByUser(user_id);
     }, []);
 
     return (
@@ -28,5 +42,6 @@ function Experiences() {
         </div>
     );  
 }
+
 
 export default Experiences;
