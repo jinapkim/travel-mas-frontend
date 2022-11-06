@@ -1,6 +1,8 @@
-import { AiFillLike, AiOutlineLike, AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
+import React from 'react';
+import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
+import Like from './Like'
 
-function ExperiencesRow({ result }) {
+function ExperiencesRow({ result, onDelete, onEdit }) {
     
     return (
         <div className="box">
@@ -13,9 +15,9 @@ function ExperiencesRow({ result }) {
                     <li>Coordinates: {result.geo_location}</li>
                     <li>Rating: {result.rating}</li>
                     <br></br>
-                    <a href="/"><AiOutlineDelete className='icon'/></a>
-                    <a href="/"><AiOutlineEdit className='icon'/></a>
-                    <a href="/"><AiOutlineLike className='icon'/></a>
+                    <Like result={result} />
+                    <u><AiOutlineDelete className='icon' title='Delete' onClick={() => onDelete(result.id)}/></u>
+                    <u><AiOutlineEdit className='icon' title='Edit' onClick={() => onEdit(result.id)}/></u>
                     <br></br>
                 </div>
             </div>
