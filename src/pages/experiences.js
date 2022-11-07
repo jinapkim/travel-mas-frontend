@@ -14,7 +14,7 @@ function Experiences({setExperienceToEdit}) {
         const response = await fetch(`http://127.0.0.1:5000/experiences/${exp_id}`, { 
             method: 'GET',
             headers: {
-                'Authorization': 'my-token'
+                "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
             } 
         });
         const data = await response.json();
@@ -26,7 +26,7 @@ function Experiences({setExperienceToEdit}) {
         const response = await fetch(`http://127.0.0.1:5000/experiences/${exp_id}`, { 
             method: 'DELETE',
             headers: {
-                'Authorization': 'my-token'
+                "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
             } 
         });
         if(response.status === 200){

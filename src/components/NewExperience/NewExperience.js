@@ -5,7 +5,7 @@ import "./NewExperience.css";
 
 const postExperience = (jsonPayload) => {
   axios
-    .post("http://localhost:50000/experiences", jsonPayload, {
+    .post("http://127.0.0.1:5000/experiences", jsonPayload, {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -34,7 +34,7 @@ const NewExperience = (props) => {
 
     if (experience.imageFile) {
       axios
-        .post("http://localhost:50000/images", formData, {
+        .post("http://127.0.0.1:5000/images", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             "Access-Control-Allow-Origin": "*",
