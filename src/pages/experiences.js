@@ -11,7 +11,7 @@ function Experiences({setExperienceToEdit}) {
     const navigate = useNavigate();
 
     const onEdit = async exp_id => {
-        const response = await fetch(`http://127.0.0.1:5000/experiences/${exp_id}`, { 
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/${exp_id}`, { 
             method: 'GET',
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
@@ -23,7 +23,7 @@ function Experiences({setExperienceToEdit}) {
     };
 
     const onDelete = async exp_id => {
-        const response = await fetch(`http://127.0.0.1:5000/experiences/${exp_id}`, { 
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/experiences/${exp_id}`, { 
             method: 'DELETE',
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
@@ -40,7 +40,7 @@ function Experiences({setExperienceToEdit}) {
     };
 
     const loadAllExperiences = async () => {
-        const response = await fetch('http://127.0.0.1:5000/experiences');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/experiences`);
         const data = await response.json();
         setSearchResults(data.experiences);
     }

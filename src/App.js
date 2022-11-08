@@ -8,7 +8,6 @@ import Experiences from './pages/experiences';
 import EditExperiencePage from './pages/edit-experience';
 
 function App() {
-
   //const [token, setToken] = useState();
   const [experienceToEdit, setExperienceToEdit] = useState([]);
 

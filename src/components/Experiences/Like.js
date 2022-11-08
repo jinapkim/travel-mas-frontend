@@ -11,7 +11,7 @@ function Like({ result }) {
         if (isLiked) {
             alert(`You don't like experience ${result.id}`);
             axios
-                .delete(`http://127.0.0.1:5000/ratings/${result.id}`)
+                .delete(`${process.env.REACT_APP_API_URL}/ratings/${result.id}`)
                 .then((response) => console.log(response))
                 .catch((err) => console.log(err));
             }
@@ -19,7 +19,7 @@ function Like({ result }) {
         else {
             alert(`You like experience ${result.id}`);
             axios
-                .put(`http://127.0.0.1:5000/ratings/${result.id}`)
+                .put(`${process.env.REACT_APP_API_URL}/ratings/${result.id}`)
                 .then((response) => console.log(response))
                 .catch((err) => console.log(err));
             }

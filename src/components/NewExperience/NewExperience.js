@@ -5,7 +5,7 @@ import "./NewExperience.css";
 
 const postExperience = (jsonPayload) => {
   axios
-    .post("http://127.0.0.1:5000/experiences", jsonPayload, {
+    .post(`${process.env.REACT_APP_API_URL}/experiences`, jsonPayload, {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -34,7 +34,7 @@ const NewExperience = (props) => {
 
     if (experience.imageFile) {
       axios
-        .post("http://127.0.0.1:5000/images", formData, {
+        .post(`${process.env.REACT_APP_API_URL}/images`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             "Access-Control-Allow-Origin": "*",
