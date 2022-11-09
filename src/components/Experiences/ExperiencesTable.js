@@ -2,7 +2,7 @@ import React from 'react';
 import ExperiencesRow from './ExperiencesRow';
 
 
-function ExperiencesTable({ results, onDelete, onEdit }) {
+function ExperiencesTable({ results, onDelete, onEdit, onView }) {
 
     return (
         <div>
@@ -10,7 +10,8 @@ function ExperiencesTable({ results, onDelete, onEdit }) {
                 result={result} 
                 key={i} 
                 onDelete={onDelete}
-                onEdit={onEdit}/>)}
+                onEdit={onEdit}
+                onView={onView}/>)}
         </div>
     );
 }

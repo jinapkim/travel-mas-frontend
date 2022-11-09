@@ -1,12 +1,7 @@
-.exp-page {
-    margin-top: 50px;
-    margin-bottom: 80px;
-}
-
-.box {
-    width: 40%;
+.single-box {
+    width: 80%;
     margin-left: 80px;
-    margin-top: 50px;
+    margin-top: 130px;
     float: left;
 }
 
@@ -24,10 +19,6 @@
     padding-top: 10px; 
     padding-left: 30px;
     padding-bottom: 20px;
-}
-
-.view-exp {
-    color: blue;
 }
 
 .icon {

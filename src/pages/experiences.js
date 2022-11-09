@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import ExperiencesTable from '../components/Experiences/ExperiencesTable';
 
 
-function Experiences({setExperienceToEdit}) {
+function Experiences({setExperienceToEdit, setExperienceToView}) {
     
     const [searchResults, setSearchResults] = useState([]);
     const navigate = useNavigate();
@@ -39,6 +39,13 @@ function Experiences({setExperienceToEdit}) {
         }
     };
 
+    const onView = async exp_id => {
+        const response = await fetch(`http://127.0.0.1:5000/experiences/${exp_id}`);
+        const data = await response.json();
+        setExperienceToView(data);
+        navigate('/view-experience');
+    };
+
     const loadAllExperiences = async () => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/experiences`);
         const data = await response.json();
@@ -52,7 +59,7 @@ function Experiences({setExperienceToEdit}) {
     return (
         <div className="exp-page">
             <h1>Experiences</h1>
-            <ExperiencesTable results={searchResults} onDelete={onDelete} onEdit={onEdit}></ExperiencesTable>
+            <ExperiencesTable results={searchResults} onDelete={onDelete} onEdit={onEdit} onView={onView}></ExperiencesTable>
         </div>
     );  
 }

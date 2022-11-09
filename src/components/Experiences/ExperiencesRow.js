@@ -2,8 +2,8 @@ import React from 'react';
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 import Like from './Like'
 
-function ExperiencesRow({ result, onDelete, onEdit }) {
-    
+function ExperiencesRow({ result, onDelete, onEdit, onView }) {
+
     return (
         <div className="box">
             <div className="shadow-box">
@@ -14,6 +14,9 @@ function ExperiencesRow({ result, onDelete, onEdit }) {
                     <li>Location: {result.location}</li>
                     <li>Coordinates: {result.geo_location}</li>
                     <li>Rating: {result.rating}</li>
+                    <br></br>
+                    <u className='view-exp' title='View' onClick={() => onView(result.id)} >View Experience</u> 
+                    <br></br>
                     <br></br>
                     <Like result={result} />
                     <u><AiOutlineDelete className='icon' title='Delete' onClick={() => onDelete(result.id)}/></u>
