@@ -11,7 +11,7 @@ function Experiences({setExperienceToEdit}) {
     const navigate = useNavigate();
 
     const onEdit = async exp_id => {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/${exp_id}`, { 
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/experiences/${exp_id}`, { 
             method: 'GET',
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
