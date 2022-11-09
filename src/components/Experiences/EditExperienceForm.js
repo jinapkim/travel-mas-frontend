@@ -21,7 +21,7 @@ const EditExperienceForm = ({ experienceToEdit }) => {
     };
 
     axios
-      .put(`${process.env.REACT_APP_API_URL}/${experienceToEdit.id}`, jsonPayload, {
+      .put(`${process.env.REACT_APP_API_URL}/experiences/${experienceToEdit.id}`, jsonPayload, {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
