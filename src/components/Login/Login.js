@@ -9,8 +9,20 @@ const Login = (props) => {
   const [open, setOpen] = useState(false);
 
   const closePopUpHandler = () => setOpen(false);
-
   const loginHandler = () => setIsLoggedIn(true);
+  const logoutHandler = () => {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+    setIsLoggedIn(false);
+  }
+
+  if (isLoggedIn) {
+    return (
+      <div>
+        <button className="login__button" type="button" onClick={logoutHandler}>Log Out</button>
+      </div>
+    )
+  }
 
   return (
     <div>
