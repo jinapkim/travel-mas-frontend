@@ -19,7 +19,7 @@ function Experiences({setExperienceToEdit, setExperienceToView}) {
         });
         const data = await response.json();
         setExperienceToEdit(data);
-        navigate('/edit-experience');
+        navigate('/edit-experience'); 
     };
 
     const onDelete = async exp_id => {

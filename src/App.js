@@ -21,7 +21,7 @@ function App() {
           <Route path='/signup' element={<Signup/>} />
           <Route path='/experiences' element={<Experiences setExperienceToEdit={setExperienceToEdit} setExperienceToView={setExperienceToView}/>} />
           <Route path='/edit-experience' element={<EditExperiencePage experienceToEdit={experienceToEdit}/>} />
-          <Route path='/view-experience' element={<ViewExperiencePage experienceToView={experienceToView}/>} />
+          <Route path='/view-experience' element={<ViewExperiencePage experienceToView={experienceToView} setExperienceToEdit={setExperienceToEdit} />} />
       </Routes>
     </Router>
   );

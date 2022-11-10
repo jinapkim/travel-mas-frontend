@@ -1,7 +1,9 @@
 import React from 'react';
+import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
+import Like from './Like'
 
 
-function ViewExperience({ experienceToView }) {
+function ViewExperience({ experienceToView, onDelete, onEdit }) {
     const result=experienceToView;
     
     return (
@@ -14,7 +16,11 @@ function ViewExperience({ experienceToView }) {
                 <li>Location: {result.location}</li>
                 <li>Coordinates: {result.geo_location}</li>
                 <li>Rating: {result.rating}</li>
-                <br></br> 
+                <br></br>
+                <Like className='icon' result={result} />
+                <u><AiOutlineDelete className='icon' title='Delete' onClick={() => onDelete(result.id)}/></u>
+                <u><AiOutlineEdit className='icon' title='Edit' onClick={() => onEdit(result.id)}/></u>
+                <br></br>
             </div>
         </div>
         </div>

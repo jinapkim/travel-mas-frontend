@@ -9,7 +9,6 @@ function Like({ result }) {
     setLiked(!isLiked);
 
     if (isLiked) {
-      alert(`You don't like experience ${result.id}`);
       axios
         .put(`${process.env.REACT_APP_API_URL}/ratings`,
         {
@@ -26,7 +25,6 @@ function Like({ result }) {
         .then((response) => console.log(response))
         .catch((err) => console.log(err));
     } else {
-      alert(`You like experience ${result.id}`);
       axios
         .post(
           `${process.env.REACT_APP_API_URL}/ratings`,

@@ -80,6 +80,8 @@ const EditExperienceForm = ({ experienceToEdit }) => {
             type="number"
             defaultValue={experienceToEdit.rating}
             name="rating"
+            min='0'
+            max='5'
             onChange={e => setRating(e.target.value)}
             />
         </div>

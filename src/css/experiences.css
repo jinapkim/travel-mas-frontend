@@ -27,10 +27,20 @@
 }
 
 .view-exp {
-    color: blue;
+    color:  rgb(0, 125, 160);
+    text-decoration: underline;
+}
+
+.view-exp:hover {
+    color: rgb(4, 62, 78);
+    cursor: pointer;
 }
 
 .icon {
     float: right;
     padding-right: 20px;
+}
+
+.icon:hover {
+    cursor: pointer;
 }

@@ -9,16 +9,13 @@ function ExperiencesRow({ result, onDelete, onEdit, onView }) {
             <div className="shadow-box">
                 <img className="card-img" src={result.image_url} alt={result.title+' image'} ></img>
                 <div className="container">
-                    <h3>{result.title}</h3>
+                    <h3 className='view-exp' title='View' onClick={() => onView(result.id)}>{result.title}</h3>
                     <li>Description: {result.description}</li>
                     <li>Location: {result.location}</li>
                     <li>Coordinates: {result.geo_location}</li>
                     <li>Rating: {result.rating}</li>
                     <br></br>
-                    <u className='view-exp' title='View' onClick={() => onView(result.id)} >View Experience</u> 
-                    <br></br>
-                    <br></br>
-                    <Like result={result} />
+                    <Like className='icon' result={result} />
                     <u><AiOutlineDelete className='icon' title='Delete' onClick={() => onDelete(result.id)}/></u>
                     <u><AiOutlineEdit className='icon' title='Edit' onClick={() => onEdit(result.id)}/></u>
                     <br></br>

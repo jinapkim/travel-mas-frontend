@@ -5,6 +5,7 @@ export const EditExperiencePage = ({ experienceToEdit }) => {
 
     return (
         <div className="edit-experience">
+            <h1>Edit Experience</h1>
             <EditExperienceForm experienceToEdit={experienceToEdit} />
         </div>
     );
