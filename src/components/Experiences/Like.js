@@ -5,6 +5,9 @@ import axios from "axios";
 function Like({ result, liked }) {
   const [isLiked, setLiked] = useState(liked);
 
+  useEffect(() => {
+    setLiked(liked);
+  }, [liked]);
 
   function onLike() {
     setLiked(!isLiked);

@@ -1,8 +1,10 @@
 import ViewExperience from "../components/Experiences/ViewExperience";
 import '../css/view-experience.css';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const ViewExperiencePage = ({ experienceToView, setExperienceToEdit }) => {
+    const [userLikes, setUserLikes] = useState([]);
     const navigate = useNavigate();
 
     const onEdit = async exp_id => {
@@ -32,9 +34,19 @@ export const ViewExperiencePage = ({ experienceToView, setExperienceToEdit }) =>
         }
     };
 
+    const loadUserLikes = async () => {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/ratings`);
+        const data = await response.json();
+        setUserLikes(data.ratings);
+    }
+
+    useEffect(() => {
+        loadUserLikes();
+    }, []);
+
     return (
         <div className="view-experience">
-            <ViewExperience experienceToView={experienceToView} onDelete={onDelete} onEdit={onEdit} />
+            <ViewExperience experienceToView={experienceToView} likes={userLikes} onDelete={onDelete} onEdit={onEdit} />
         </div>
     );
 };
