@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 import axios from "axios";
 
-function Like({ result }) {
-  const [isLiked, setLiked] = useState(false);
+function Like({ result, liked }) {
+  const [isLiked, setLiked] = useState(liked);
+
 
   function onLike() {
     setLiked(!isLiked);

@@ -21,12 +21,12 @@ const LoginForm = (props) => {
       .then((resp) => {
         localStorage.setItem("access_token", resp.data.access_token);
         localStorage.setItem("refresh_token", resp.data.refresh_token);
+        localStorage.setItem("user_id", resp.data.user_id);
+        props.setLoggedInStatus();
       })
       .catch((error) => {
         console.log(error);
       });
-
-    props.setLoggedInStatus();
     props.closePopUp();
   };
 

@@ -17,7 +17,6 @@ function ViewExperience({ experienceToView, onDelete, onEdit }) {
                 <li>Coordinates: {result.geo_location}</li>
                 <li>Rating: {result.rating}</li>
                 <br></br>
-                <Like className='icon' result={result} />
                 <u><AiOutlineDelete className='icon' title='Delete' onClick={() => onDelete(result.id)}/></u>
                 <u><AiOutlineEdit className='icon' title='Edit' onClick={() => onEdit(result.id)}/></u>
                 <br></br>

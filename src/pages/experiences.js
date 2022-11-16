@@ -8,6 +8,7 @@ import ExperiencesTable from '../components/Experiences/ExperiencesTable';
 function Experiences({setExperienceToEdit, setExperienceToView}) {
     
     const [searchResults, setSearchResults] = useState([]);
+    const [userLikes, setUserLikes] = useState([]);
     const navigate = useNavigate();
 
     const onEdit = async exp_id => {
@@ -52,6 +53,16 @@ function Experiences({setExperienceToEdit, setExperienceToView}) {
         setSearchResults(data.experiences);
     }
 
+    const loadUserLikes = async () => {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/ratings`);
+        const data = await response.json();
+        setUserLikes(data.ratings);
+    }
+
+    useEffect(() => {
+        loadUserLikes();
+    }, []);
+
     useEffect(() => {
         loadAllExperiences();
     }, []);
@@ -59,7 +70,7 @@ function Experiences({setExperienceToEdit, setExperienceToView}) {
     return (
         <div className="exp-page">
             <h1>Experiences</h1>
-            <ExperiencesTable results={searchResults} onDelete={onDelete} onEdit={onEdit} onView={onView}></ExperiencesTable>
+            <ExperiencesTable results={searchResults} likes={userLikes} onDelete={onDelete} onEdit={onEdit} onView={onView}></ExperiencesTable>
         </div>
     );  
 }
