@@ -30,23 +30,38 @@ function Like({ result, liked }) {
         .catch((err) => console.log(err));
     } else {
       axios
-        .post(
-          `${process.env.REACT_APP_API_URL}/ratings`,
-          {
-            experience_id: result.id,
-            thumbs_up: true,
+        .put(`${process.env.REACT_APP_API_URL}/ratings`,
+        {
+          "experience_id": result.id,
+          "thumbs_up": true
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
           },
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-              "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
-            },
-          }
-        )
+        })
         .then((response) => console.log(response))
-        .catch((err) => console.log(err));
-    }
+        .catch((err) => {
+          axios
+            .post(
+              `${process.env.REACT_APP_API_URL}/ratings`,
+              {
+                experience_id: result.id,
+                thumbs_up: true,
+              },
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                  "Access-Control-Allow-Origin": "*",
+                  "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
+                },
+              }
+            )
+            .then((response) => console.log(response))
+        });
+      }
   }
 
   return (
