@@ -2,7 +2,6 @@ import React from 'react';
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 import Like from './Like'
 
-
 function ViewExperience({ experienceToView, likes, onDelete, onEdit }) {
     const result=experienceToView;
     const user_id = parseInt(localStorage.getItem("user_id"));

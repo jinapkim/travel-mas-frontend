@@ -13,6 +13,7 @@ const Login = (props) => {
   const logoutHandler = () => {
     localStorage.removeItem("access_token");
     localStorage.removeItem("refresh_token");
+    localStorage.removeItem("user_id");
     setIsLoggedIn(false);
   }
 
