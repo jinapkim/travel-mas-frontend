@@ -17,7 +17,7 @@ const Login = (props) => {
     setIsLoggedIn(false);
   }
 
-  if (isLoggedIn) {
+  if (localStorage.getItem("access_token") || isLoggedIn) {
     return (
       <div>
         <button className="login__button" type="button" onClick={logoutHandler}>Log Out</button>

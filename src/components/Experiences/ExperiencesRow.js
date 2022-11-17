@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 import Like from "./Like";
-import AddTrip from "../Trips/AddTrip";
+import AddTrip from "../AddToTrip/AddTrip";
 
 function ExperiencesRow({ result, likes, trips, onDelete, onEdit, onView }) {
   let liked = false;
