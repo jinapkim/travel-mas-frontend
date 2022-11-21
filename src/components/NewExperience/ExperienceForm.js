@@ -109,7 +109,7 @@ const ExperienceForm = (props) => {
             <input id="file-upload" type="file" name="file" onChange={selectFileHandler} />
         </div>
       </div>
-      <div className="new-expense__actions">
+      <div className="new-experience__actions">
         <button onClick={props.onCancel}>Cancel</button>
         <button>Add Experience</button>
       </div>

@@ -7,6 +7,7 @@ import Signup from './pages/signup';
 import Experiences from './pages/experiences';
 import EditExperiencePage from './pages/edit-experience';
 import ViewExperiencePage from './pages/view-experience';
+import Trips from './pages/trip-experiences';
 
 function App() {
   //const [token, setToken] = useState();
@@ -22,6 +23,7 @@ function App() {
           <Route path='/experiences' element={<Experiences setExperienceToEdit={setExperienceToEdit} setExperienceToView={setExperienceToView}/>} />
           <Route path='/edit-experience' element={<EditExperiencePage experienceToEdit={experienceToEdit}/>} />
           <Route path='/view-experience' element={<ViewExperiencePage experienceToView={experienceToView} setExperienceToEdit={setExperienceToEdit} />} />
+          <Route path='/trip-experiences' element={<Trips />} />
       </Routes>
     </Router>
   );

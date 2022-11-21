@@ -1,0 +1,18 @@
+.experience {
+    background-color: aliceblue;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 15rem;
+    max-width: 30%;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.experience img {
+    max-width: 100%;
+}
+
+.experience h3 {
+    color: rgb(0, 125, 160)
+}

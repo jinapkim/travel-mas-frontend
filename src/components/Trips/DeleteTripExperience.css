@@ -1,0 +1,23 @@
+.delete-trip {
+    margin: auto;
+    max-width: 75%;
+    padding: 2px;
+    text-align: right;
+}
+
+.delete-trip button {
+    font: inherit;
+    cursor: pointer;
+    padding: 10px 10px;
+    border: 1px solid rgb(104, 198, 225);
+    background-color: rgb(104, 198, 225);
+    color: black;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.delete-trip button:hover,
+.delete-trip button:active {
+  background-color: rgb(4, 62, 78);
+  border-color: rgb(4, 62, 78);
+}

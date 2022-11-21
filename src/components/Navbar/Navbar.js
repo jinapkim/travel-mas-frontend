@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavLink, NavBtn, NavBtnLink, NavMenu, Bars, LogoImg } from './NavbarElements';
+import { Nav, NavLink, NavBtn, NavMenu, Bars, LogoImg } from './NavbarElements';
 import Login from '../Login/Login';
 
 const Navbar = () => {
@@ -14,8 +14,8 @@ const Navbar = () => {
                     <NavLink to='/experiences' activeStyle>
                         Experiences
                     </NavLink>
-                    <NavLink to='/account' activeStyle>
-                        My Account
+                    <NavLink to='/trip-experiences' activeStyle>
+                        My Trips
                     </NavLink>
                     <NavLink to='/signup' activeStyle>
                         Sign Up

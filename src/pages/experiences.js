@@ -6,7 +6,12 @@ import ExperiencesTable from "../components/Experiences/ExperiencesTable";
 
 function Experiences({ setExperienceToEdit, setExperienceToView }) {
   const [searchResults, setSearchResults] = useState([]);
-  const [userTrips, setUserTrips] = useState([]);
+  const [userTrips, setUserTrips] = useState([
+    {
+      name: "No Trips Found",
+      id: -1,
+    },
+  ]);
   const [userLikes, setUserLikes] = useState([]);
   const navigate = useNavigate();
 

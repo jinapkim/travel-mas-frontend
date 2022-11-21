@@ -1,0 +1,33 @@
+.new-trip {
+    background-color: rgb(104, 198, 225);
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 60rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .new-trip button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(0, 125, 160);
+    background-color: rgb(0, 125, 160);
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+  .new-trip button:hover,
+  .new-trip button:active {
+    background-color: rgb(4, 62, 78);
+    border-color: rgb(4, 62, 78);
+  }
+  
+  .new-trip button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
