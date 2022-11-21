@@ -27,7 +27,6 @@ const TripSelect = (props) => {
     props.onSubmit(event.target.id === "delete");
     if (event.target.id === "delete") {
       loadUserTrips();
-      window.location.reload();
     }
   };
 

@@ -74,12 +74,19 @@ function Experiences({ setExperienceToEdit, setExperienceToView }) {
       )}`
     );
     const data = await response.json();
-    setUserTrips(data.trips);
+    if (!data.trips.length) {
+      setUserTrips([{
+        name: "No Trips Found",
+        id: -1,
+      }]);
+    } else {
+      setUserTrips(data.trips);
+    }
   };
 
   useEffect(() => {
     loadUserTrips();
-  }, []);
+  }, userTrips);
 
   useEffect(() => {
     loadAllExperiences();
@@ -93,10 +100,6 @@ function Experiences({ setExperienceToEdit, setExperienceToView }) {
 
   useEffect(() => {
     loadUserLikes();
-  }, []);
-
-  useEffect(() => {
-    loadAllExperiences();
   }, []);
 
   return (
