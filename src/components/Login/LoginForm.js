@@ -5,7 +5,7 @@ import "./LoginForm.css";
 const LoginForm = (props) => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const changeUserNameHandler = (event) => {
     setUserName(event.target.value);
@@ -22,11 +22,10 @@ const LoginForm = (props) => {
       .then((resp) => {
         localStorage.setItem("access_token", resp.data.access_token);
         localStorage.setItem("refresh_token", resp.data.refresh_token);
-        setError('');
+        localStorage.setItem("user_id", resp.data.user_id);
+        setError("");
         props.setLoggedInStatus();
         props.closePopUp();
-        localStorage.setItem("user_id", resp.data.user_id);
-        props.setLoggedInStatus();
       })
       .catch((error) => {
         console.log(error.response);
@@ -36,7 +35,6 @@ const LoginForm = (props) => {
   };
 
   return (
-    <>
       <form onSubmit={submitHandler}>
         <div className="login__controls">
           <div className="login__control">
@@ -61,7 +59,6 @@ const LoginForm = (props) => {
         </div>
         {error && <span>{error}</span>}
       </form>
-    </>
   );
 };
 

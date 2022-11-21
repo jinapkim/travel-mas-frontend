@@ -5,13 +5,12 @@ const api = axios.create({
   headers: {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
-    "Authorization": `Bearer ${localStorage.getItem("access_token")}`
-  }
+    Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+  },
 });
 
 export function get_by_keyword(keyword) {
-    return api
-        .get('/experiences', {
-            params: {keyword: keyword}
-        });
+  return api.get("/experiences", {
+    params: { keyword: keyword },
+  });
 }

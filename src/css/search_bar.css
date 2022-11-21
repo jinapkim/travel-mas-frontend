@@ -1,14 +1,14 @@
 .search {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
-.icon {
-    position: absolute;
-    left: 80px;
-    top: calc(50% - 0.5em); 
+.search-icon {
+  position: absolute;
+  left: 80px;
+  top: calc(50% - 0.5em);
 }
 
 .search-input {
-    padding-left: 17px;;
+  padding-left: 17px;
 }
