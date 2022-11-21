@@ -18,7 +18,7 @@ const AddTrip = (props) => {
   };
 
   return (
-    <div>
+    <div className="add-trip">
       <AddTripForm addTrip={addTripHandler} trips={props.userTrips} />
     </div>
   );

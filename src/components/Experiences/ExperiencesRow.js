@@ -48,8 +48,8 @@ function ExperiencesRow({ result, likes, trips, onDelete, onEdit, onView }) {
             />
           </u>
           <br></br>
+          <AddTrip userTrips={trips} experienceId={result.id} />
         </div>
-        <AddTrip userTrips={trips} experienceId={result.id} />
       </div>
     </div>
   );
