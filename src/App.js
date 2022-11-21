@@ -6,11 +6,11 @@ import Home from './pages/home';
 import Signup from './pages/signup';
 import Experiences from './pages/experiences';
 import EditExperiencePage from './pages/edit-experience';
+import SearchResult from './components/Search/search_result';
 import ViewExperiencePage from './pages/view-experience';
 import Trips from './pages/trip-experiences';
 
 function App() {
-  //const [token, setToken] = useState();
   const [experienceToEdit, setExperienceToEdit] = useState([]);
   const [experienceToView, setExperienceToView] = useState([]);
 
@@ -24,6 +24,7 @@ function App() {
           <Route path='/edit-experience' element={<EditExperiencePage experienceToEdit={experienceToEdit}/>} />
           <Route path='/view-experience' element={<ViewExperiencePage experienceToView={experienceToView} setExperienceToEdit={setExperienceToEdit} />} />
           <Route path='/trip-experiences' element={<Trips />} />
+          <Route path='/search' element={<SearchResult />} />
       </Routes>
     </Router>
   );

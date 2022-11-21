@@ -4,26 +4,16 @@ const api = axios.create({
   baseURL: `${process.env.REACT_APP_API_URL}/`,
 });
 
-//const config = {
-//    headers: { Authorization: `Bearer ${token}` }
-//}
-
 // POST /register
 export function post_register(first_name, last_name, user_name, password) {
-  api
+  
+  return api
     .post("/register", {
       first_name: first_name,
       last_name: last_name,
       user_name: user_name,
       password: password,
     })
-    .then((res) => {
-      console.log(res.data);
-      return res.data.access_token;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
 }
 
 // POST /login

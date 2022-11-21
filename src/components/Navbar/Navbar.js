@@ -1,16 +1,17 @@
 import React from 'react';
 import { Nav, NavLink, NavBtn, NavMenu, Bars, LogoImg } from './NavbarElements';
 import Login from '../Login/Login';
+import Search from '../Search/search_bar';
 
 const Navbar = () => {
     return (
         <>
             <Nav>
-                <Bars />
                 <NavMenu>
                     <NavLink to='/' activeStyle>
                         <LogoImg src={process.env.PUBLIC_URL + '/travelmas-logo.png'} />
                     </NavLink>
+                    <Search />
                     <NavLink to='/experiences' activeStyle>
                         Experiences
                     </NavLink>
