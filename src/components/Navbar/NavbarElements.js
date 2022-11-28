@@ -75,8 +75,8 @@ export const NavBtnLink = styled(Link)`
 
 export const LogoImg = styled.img`
     float: left;
-    max-width: 180%;
-    height: 300px;
+    max-width: 100%;
+    height: 50px;
     display: flex;
     padding: 10px 0px;
 `
