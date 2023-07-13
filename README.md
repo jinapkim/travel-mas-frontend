@@ -1,4 +1,4 @@
-Travel Mas 
+# Travel Mas 
 
 Our team created a crowd-sourced travel planner full stack web application where users can upload, share, and rate various travel experiences. By creating a full stack application our team gained more experience with both frontend and backend web development while challenging us to further develop our skills in Python and JavaScript. 
 
