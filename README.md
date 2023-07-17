@@ -5,7 +5,7 @@ Our team created a crowd-sourced travel planner full stack web application where
 When the user visits the website they are presented with the option to login or search for experiences.  They may search for experiences by location or keyword.  If the user wants to create experiences or trips, they must first login. Experiences can be anything the user would like to share with other users. Some examples of experiences are restaurants, hotels, events, tours, landmarks, parks, museums, fairs, and festivals. The user is able to rate their experience. With this feedback, the user lets others know if they recommend the experience, or if this is an experience to avoid.  If the user is planning to travel, they can create a trip. A trip is a collection of experiences that the user finds interesting, and would like to include in their travels. The experiences in a trip can be the user’s own experiences or experiences of other users. Users can also rate other users’ experiences. If they find someone’s information helpful, they can let them know.
 
 -----
-Demo 
+#Demo 
 
 ![image](https://github.com/jinapkim/travel-mas-frontend/assets/72416068/ad48cd0a-8c51-49b4-af6a-ac720835974d)
 ![image](https://github.com/jinapkim/travel-mas-frontend/assets/72416068/c8aa9516-e891-4262-8022-fa4ed49907ca)
@@ -17,7 +17,7 @@ Demo
 ![image](https://github.com/jinapkim/travel-mas-frontend/assets/72416068/1d4bfcca-2292-4c47-8aa6-2d9e9cf97497)
 
 -----
-Installation
+#Installation
 
 1. Clone repository to desired location
 2. cd into the project's root directory
