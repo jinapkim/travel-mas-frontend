@@ -23,4 +23,4 @@ When the user visits the website they are presented with the option to login or 
 2. cd into the project's root directory
 3. Run npm install
 4. Run npm start
-5. API will be accessible on http://localhost:3000
+5. The application will be accessible on http://localhost:3000
